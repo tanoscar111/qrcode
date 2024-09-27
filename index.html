@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trang Web Với Nút Ở Giữa</title>
+    <style>
+      /* CSS cho trang web */
+      body,
+      html {
+        height: 100%;
+        margin: 0;
+        font-family: "Arial", sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #ffffff; /* Nền trắng */
+      }
+
+      .button-container {
+        text-align: center;
+      }
+
+      .fancy-button {
+        padding: 15px 30px;
+        font-size: 18px;
+        text-transform: uppercase;
+        letter-spacing: 2.5px;
+        font-weight: 500;
+        color: #ffffff;
+        background-color: #4a90e2; /* Màu xanh dương */
+        border: none;
+        border-radius: 45px;
+        box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease 0s;
+        cursor: pointer;
+        outline: none;
+        text-decoration: none; /* Thêm dòng này để loại bỏ gạch chân */
+      }
+
+      .fancy-button:hover {
+        background-color: #357ae8; /* Màu xanh dương đậm hơn khi hover */
+        box-shadow: 0px 15px 20px rgba(74, 144, 226, 0.4);
+        color: #ffffff;
+        transform: translateY(-7px);
+      }
+
+      /* Responsive cho các thiết bị di động */
+      @media (max-width: 600px) {
+        .fancy-button {
+          padding: 12px 24px;
+          font-size: 16px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="button-container">
+      <a href="http://benhviendanang.com/" class="fancy-button">Nhấn vào đây</a>
+    </div>
+  </body>
+</html>
