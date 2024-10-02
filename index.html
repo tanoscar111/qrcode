@@ -23,7 +23,7 @@
       /* CSS cho trang web */
       body,
       html {
-        height: 100vh;
+        height: 100%;
         margin: 0;
         font-family: "Arial", sans-serif;
         display: flex;
@@ -33,11 +33,10 @@
         font-family: "HUELIC_L", sans-serif;
       }
       img {
-        width: 50%;
+        width: 100%;
         height: auto;
-        max-height: 50vh;
+        max-height: 40vh;
         object-fit: contain;
-
         background-size: contain;
         background-position: center;
         background-repeat: no-repeat;
@@ -48,7 +47,7 @@
       }
 
       header {
-        height: 10vh;
+        height: 15vh;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -59,6 +58,7 @@
         position: relative;
         width: 100%;
         height: 100%;
+        overflow: hidden;
       }
 
       .slide-title {
@@ -66,36 +66,33 @@
         width: 100%;
         text-align: center;
         opacity: 0;
-        transform: translateY(20px);
-        transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+        transform: translateX(-100%);
+        transition: opacity 0.5s ease-in-out, transform 20s linear;
         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
         color: #000000;
         font-weight: bold;
+        white-space: nowrap;
       }
 
       .slide-title.active {
         opacity: 1;
-        transform: translateY(0);
-      }
-
-      .slide-title.fade-out {
-        opacity: 0;
-        transform: translateY(-20px);
+        transform: translateX(100%);
       }
 
       main {
         flex-grow: 1;
         display: flex;
-        flex-direction: row;
-        justify-content: space-between;
+        flex-direction: column;
+        justify-content: center;
         align-items: center;
-        max-height: calc(100vh - 20vh);
+        max-height: calc(100% - 20vh);
         overflow-y: auto;
       }
 
       .button-container {
         text-align: center;
-        width: 50%;
+        width: 100%;
+        margin-top: 20px;
       }
 
       .fancy-button {
@@ -122,27 +119,20 @@
         transform: translateY(-7px);
       }
 
-      footer {
-        text-align: center;
-        padding: 10px 0;
-        height: 5vh;
-      }
-
       /* Responsive cho các thiết bị di động */
-      @media (max-width: 600px) {
+      @media (max-width: 768px) {
         .fancy-button {
           padding: 12px 24px;
           font-size: 16px;
         }
         header {
-          height: 15vh;
+          height: 10vh;
         }
         .slide-title {
-          font-size: 18px;
+          font-size: 16px;
         }
         main {
-          flex-direction: column;
-          max-height: calc(100vh - 25vh);
+          max-height: calc(100% - 15vh);
         }
         .button-container,
         img {
@@ -154,102 +144,58 @@
       }
     </style>
   </head>
-  <body class="container-fluid">
+  <body class="container-fluid d-flex flex-column vh-100">
     <header>
       <div class="slide-container">
         <h1 class="slide-title">
-          Hiến máu không làm bạn mất đi gì, nhưng nó có thể mang lại cuộc sống
-          mới cho người khác.
+          Ngày 03/10/2024 Tại trường Đại học Đông Á Đà Nẵng
+        </h1>
+        <h1 class="slide-title">Ngày 06/10/2024 Tại Quận Sơn Trà Đà Nẵng</h1>
+        <h1 class="slide-title">
+          Ngày 11/10/2024 Tại trường Đại học Ngoại ngữ Đà Nẵng
         </h1>
         <h1 class="slide-title">
-          Mỗi lần hiến máu, bạn không chỉ cứu sống một người, mà còn trao đi sự
-          hi vọng và tình yêu thương
-        </h1>
-        <h1 class="slide-title">
-          Một ngày không mua sắm hay giải trí, nhưng một ngày bạn hiến máu, bạn
-          đã làm điều cao cả cho cộng đồng.
-        </h1>
-        <h1 class="slide-title">
-          Hiến máu nhân đạo không phân biệt tuổi tác, giới tính hay địa vị. Mỗi
-          người đều có thể trở thành một người hùng, cứu sống người khác
-        </h1>
-        <h1 class="slide-title">
-          Hiến máu là cách tuyệt vời để chúng ta thể hiện lòng biết ơn cuộc
-          sống, chia sẻ sự sống và trân trọng giá trị của mỗi ngày
+          Ngày 12/10/2024 Tại trường Đại học Thể dục thể thao Đà Nẵng
         </h1>
       </div>
     </header>
-    <div class="row" style="height: calc(100vh - 5vh - 20vh)">
-      <main>
-        <div
-          class="col-md-6 order-md-1 order-2 d-flex align-items-center justify-content-center"
-        >
-          <div class="button-container">
-            <a
-              href="http://benhviendanang.com/"
-              class="fancy-button"
-              title="Truy cập trang chủ Bệnh Viện Đà Nẵng"
-              >Nhấn vào đây</a
-            >
-          </div>
+    <main class="row flex-grow-1">
+      <div class="col-12 d-flex justify-content-center align-items-center">
+        <img
+          src="./Remove-bg.ai_1727864818638.png"
+          alt="Hình ảnh Bệnh Viện Đà Nẵng"
+          class="img-fluid"
+          style="max-height: 60vh"
+        />
+      </div>
+      <div class="col-12 d-flex align-items-center justify-content-center">
+        <div class="button-container">
+          <a
+            href="http://benhviendanang.com/"
+            class="fancy-button"
+            title="Truy cập trang chủ Bệnh Viện Đà Nẵng"
+            >Nhấn vào đây</a
+          >
         </div>
-        <div
-          class="col-md-6 order-md-2 order-1 d-flex justify-content-center align-items-center"
-        >
-          <img
-            src="./Remove-bg.ai_1727864818638.png"
-            alt="Hình ảnh Bệnh Viện Đà Nẵng"
-            class="img-fluid"
-          />
-        </div>
-      </main>
-    </div>
+      </div>
+    </main>
     <script>
       const titles = document.querySelectorAll(".slide-title");
       let currentIndex = 0;
 
       function slideTitle() {
-        titles[currentIndex].classList.add("slide-out");
-        setTimeout(() => {
-          titles[currentIndex].classList.remove("active", "slide-out");
-          currentIndex = (currentIndex + 1) % titles.length;
-          titles[currentIndex].classList.add("active", "slide-in");
-          setTimeout(() => {
-            titles[currentIndex].classList.remove("slide-in");
-          }, 500);
-        }, 500);
+        titles[currentIndex].classList.remove("active");
+        currentIndex = (currentIndex + 1) % titles.length;
+        titles[currentIndex].classList.add("active");
       }
 
-      setInterval(slideTitle, 5000);
+      setInterval(slideTitle, 10000);
 
-      const style = document.createElement("style");
-      style.textContent = `
-        .slide-container {
-          overflow: hidden;
-          position: relative;
-          width: 100%;
-        }
-        .slide-title {
-          position: absolute;
-          width: 100%;
-          opacity: 0;
-          transform: translateX(100%);
-          transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
-        }
-        .slide-title.active {
-          opacity: 1;
-          transform: translateX(0);
-        }
-        .slide-out {
-          opacity: 0;
-          transform: translateX(-100%);
-        }
-        .slide-in {
-          opacity: 1;
-          transform: translateX(0);
-        }
-      `;
-      document.head.appendChild(style);
+      // Đảm bảo rằng script được thực thi khi trang web đã tải xong
+      window.onload = function () {
+        titles[0].classList.add("active");
+        slideTitle(); // Bắt đầu animation ngay lập tức
+      };
     </script>
 
     <script
